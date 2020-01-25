@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>我的主页</title>
+    <script>
+        function baidu() {
+            var ssnr = document.getElementById("q").value
+            if (ssnr == "") {
+                alert("你不能搜索空气---啊!")
+            } else {
+                ssnr = "http://www.baidu.com/s?wd=" + ssnr;
+                window.open(ssnr);
+            }
+        }
+        document.onkeydown = function(event) {
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                baidu()
+            }
+        }
+        setInterval("cg.innerHTML=new Date().toLocaleString()", 1000);
+    </script>
+</head>
+
+<body>
+    <div id="zwz"></div>
+    <div class="div-sjk">
+        <div id="cg"></div>
+    </div>
+    <div id="jg" style="height: 50px;"></div>
+    <div class="div-ssk">
+        <input type="text" id="q" autofocus="autofocus">
+        <a id="a-ssj" href="javascript:baidu()"></a>
+    </div>
+</body>
+
+</html>
