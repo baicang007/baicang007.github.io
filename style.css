@@ -1,0 +1,76 @@
+/* 星号可以定义所有元素的样式 */
+
+* {
+    border: 0px;
+    /*去除边框*/
+    padding: 0px;
+    /*去除内边距*/
+    margin: 0px;
+    /*去除外边距*/
+    background-position: center;
+    /* 背景图片居中显示 */
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-image: url("images/221923120818963975.jpg");
+}
+
+#zwz {
+    width: 100%;
+    height: 130px;
+}
+
+.div-sjk {
+    width: 100%;
+    display: flex;
+    /* display: flex;实现flex弹性布局 */
+    justify-content: center;
+    /* justify-content: center;让内容水平居中对齐 */
+    align-items: center;
+    /* align-items: center;让内容垂直居中对齐 */
+}
+
+#cg {
+    width: 300px;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(233, 233, 233);
+    background-color: rgba(2, 2, 2, 0.8);
+    box-shadow: rgb(231, 211, 183) 0 0 35px;
+    /* background-color: cadetblue; */
+}
+
+.div-ssk {
+    width: 100%;
+    display: flex;
+    /* display: flex;实现flex弹性布局 */
+    justify-content: center;
+    /* justify-content: center;让内容水平居中对齐 */
+    align-items: center;
+    /* align-items: center;让内容垂直居中对齐 */
+}
+
+#q {
+    float: left;
+    width: 360px;
+    height: 30px;
+    padding: 3px;
+    border: 1px solid rgb(211, 111, 11);
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+#a-ssj {
+    float: left;
+    display: block;
+    text-align: center;
+    height: 38px;
+    width: 80px;
+    background-color: rgba(211, 111, 11, 0.9);
+}
