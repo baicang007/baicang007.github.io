@@ -13,16 +13,17 @@
 
 html {
     height: 100%;
+    background-image: -webkit-radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center top, #000d4d 0%, #000105 100%);
+    cursor: move;
 }
 
 body {
     height: 100%;
-    background-image: url("images/221923120818963975.jpg");
-}
-
-#zwz {
     width: 100%;
-    height: 130px;
+    margin: 0;
+    overflow: hidden;
+    /* background-image: url("images/221923120818963975.jpg"); */
 }
 
 .div-sjk {
@@ -38,12 +39,12 @@ body {
 #cg {
     width: 300px;
     height: 45px;
+    border-radius: 3%;
     font-size: 30px;
     text-align: center;
     color: rgb(233, 233, 233);
-    background-color: rgba(2, 2, 2, 0.8);
-    box-shadow: rgb(231, 211, 183) 0 0 35px;
-    /* background-color: cadetblue; */
+    background-color: rgba(8, 8, 8, 0.8);
+    box-shadow: rgb(13, 113, 123) 0 0 35px;
 }
 
 .div-ssk {
