@@ -36,15 +36,15 @@ body {
     /* align-items: center;让内容垂直居中对齐 */
 }
 
-#cg {
-    width: 300px;
-    height: 45px;
-    border-radius: 3%;
-    font-size: 30px;
+.div-sjk #cg {
+    width: 183px;
+    height: 83px;
+    border-radius: 5%;
+    font-size: 70px;
     text-align: center;
-    color: rgb(233, 233, 233);
-    background-color: rgba(8, 8, 8, 0.8);
-    box-shadow: rgb(13, 113, 123) 0 0 35px;
+    color: rgba(233, 233, 233, 0.8);
+    background-color: rgba(18, 18, 18, 0.8);
+    box-shadow: rgb(8, 8, 8) 0 0 35px;
 }
 
 .div-ssk {
@@ -57,8 +57,7 @@ body {
     /* align-items: center;让内容垂直居中对齐 */
 }
 
-#q {
-    float: left;
+.div-ssk #q {
     width: 360px;
     height: 30px;
     padding: 3px;
@@ -67,11 +66,10 @@ body {
     font-size: 16px;
 }
 
-#a-ssj {
-    float: left;
+.div-ssk #a-ssj {
     display: block;
     text-align: center;
     height: 38px;
-    width: 80px;
+    width: 83px;
     background-color: rgba(211, 111, 11, 0.9);
 }
