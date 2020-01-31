@@ -36,15 +36,55 @@ body {
     /* align-items: center;让内容垂直居中对齐 */
 }
 
-.div-sjk #cg {
+.div-sjk .div-dhk {
+    width: 188px;
+    height: 83px;
+    border: 2px solid #000;
+    overflow: hidden;
+    box-shadow: rgb(8, 8, 8) 0 0 35px;
+}
+
+.div-sjk .div-dhk:hover #rq {
+    transform: rotate(0deg);
+    /* 鼠标经过动画框转动日期框以显示日期 */
+}
+
+.div-sjk .div-dhk #cg {
     width: 188px;
     height: 83px;
     font-size: 70px;
     line-height: 83px;
-    text-align: center;
     color: rgba(233, 233, 233, 0.8);
     background-color: rgba(18, 18, 18, 0.8);
-    box-shadow: rgb(8, 8, 8) 0 0 35px;
+}
+
+.div-sjk .div-dhk #rq {
+    width: 188px;
+    height: 83px;
+    text-align: center;
+    position: relative;
+    /* 上下两行代码让其可以与时间框重叠*/
+    top: -83px;
+    background-color: rgb(9, 9, 9);
+    transform: rotate(180deg);
+    transform-origin: left bottom;
+    transition: all 0.5s;
+}
+
+.div-sjk .div-dhk #rq #p-rq {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 31px;
+    font-size: 21px;
+    text-shadow: rgb(119, 119, 119) 0 0 18px;
+}
+
+.div-sjk .div-dhk #rq #p-xq {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    line-height: 50px;
+    font-size: 30px;
+    text-shadow: rgb(121, 121, 121) 0 0 18px;
 }
 
 .div-ssk {

@@ -21,12 +21,30 @@
         }
         // 按回车执行搜索函数
         document.onkeydown = function(event) {
-                var e = event || window.event || arguments.callee.caller.arguments[0];
-                if (e && e.keyCode == 13) {
-                    baidu()
-                }
+            var e = event || window.event || arguments.callee.caller.arguments[0];
+            if (e && e.keyCode == 13) {
+                baidu()
             }
-            // 每隔6秒刷新时间
+        }
+    </script>
+</head>
+
+<body onload="getNowDate();">
+
+    <div class="zwz" style="height: 130px;"></div>
+    <!-- 上面占位的盒子 -->
+    <div class="div-sjk">
+        <div class="div-dhk">
+            <div id="cg">1983</div>
+            <div id="rq">
+                <p id="p-rq">1983年06月08日</p>
+                <p id="p-xq"></p>
+            </div>
+        </div>
+    </div>
+    <!-- 上面是显示时间的盒子 -->
+    <script>
+        // 每隔6秒刷新时间
         setInterval("gettime()", 6000);
 
         function gettime() {
@@ -38,22 +56,30 @@
             show_str += ((minutes < 10) ? ":0" : ":") + minutes;
             document.getElementById("cg").innerText = show_str;
         }
+
+        function getNowDate() {
+            var date = new Date();
+            var year = date.getFullYear() // 年
+            var month = date.getMonth() + 1; // 月
+            var day  = date.getDate(); // 日
+            var weekArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var week = weekArr[date.getDay()];
+            // 给一位数数据前面加 “0”
+            if (month >= 1 && month <= 9) { 
+                month = "0" + month;
+            }
+            if (day >= 0 && day <= 9) { 
+                day = "0" + day;
+            }
+            document.getElementById("p-rq").innerText = year + "年" + month + "月" + day + "日";
+            document.getElementById("p-xq").innerText = week;
+        }
     </script>
-</head>
-
-<body>
-
-    <div class="zwz" style="height: 130px;"></div>
-    <!-- 上面占位的盒子 -->
-    <div class="div-sjk">
-        <div id="cg">1983</div>
-    </div>
-    <!-- 上面是显示时间的盒子 -->
 
     <div class="zwz" style="height: 50px;"></div>
     <!-- 上面又一个占位盒子 -->
     <div class="div-ssk">
-        <input type="text" id="q" autofocus="autofocus">
+        <input type="search" id="q" autofocus="autofocus">
         <a id="a-ssj" href="javascript:baidu()">搜 索</a>
     </div>
     <!-- 上面是搜索的盒子 -->
@@ -63,26 +89,32 @@
     <div class="div-dbdh">
         <ul class="breadcrumb">
             <li>
+                <a href="https://v.qq.com">
+                    <span class="icon">腾</span>
+                    <span class="text">讯 视 频</span>
+                </a>
+            </li>
+            <li>
                 <a href="http://youku.com">
-                    <span class="icon icon-file">优</span>
+                    <span class="icon">优</span>
                     <span class="text">了 个 酷</span>
                 </a>
             </li>
             <li>
                 <a href="http://iqiyi.com">
-                    <span class="icon icon-folder-open">爱</span>
+                    <span class="icon">爱</span>
                     <span class="text">奇 艺</span>
                 </a>
             </li>
             <li>
                 <a href="https://www.bilibili.com">
-                    <span class="icon icon-code">哔</span>
+                    <span class="icon">哔</span>
                     <span class="text">哩 哔 哩</span>
                 </a>
             </li>
             <li>
                 <a href="http://www.shufazidian.com">
-                    <span class="icon icon-beaker">书</span>
+                    <span class="icon">书</span>
                     <span class="text">法 字 典</span>
                 </a>
             </li>
