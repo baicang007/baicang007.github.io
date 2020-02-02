@@ -37,9 +37,9 @@ body {
 }
 
 .div-sjk .div-dhk {
-    width: 188px;
+    width: 183px;
     height: 83px;
-    border: 2px solid #000;
+    border: 1px solid #000;
     overflow: hidden;
     box-shadow: rgb(8, 8, 8) 0 0 35px;
 }
@@ -50,16 +50,17 @@ body {
 }
 
 .div-sjk .div-dhk #cg {
-    width: 188px;
+    width: 183px;
     height: 83px;
     font-size: 70px;
     line-height: 83px;
+    text-align: center;
     color: rgba(233, 233, 233, 0.8);
     background-color: rgba(18, 18, 18, 0.8);
 }
 
 .div-sjk .div-dhk #rq {
-    width: 188px;
+    width: 183px;
     height: 83px;
     text-align: center;
     position: relative;
