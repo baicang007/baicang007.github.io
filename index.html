@@ -31,8 +31,6 @@
 
 <body onload="getNowDate();">
 
-    <div class="zwz" style="height: 130px;"></div>
-    <!-- 上面占位的盒子 -->
     <div class="div-sjk">
         <div class="div-dhk">
             <div id="cg">1983</div>
@@ -74,15 +72,21 @@
             document.getElementById("p-rq").innerText = year + "年" + month + "月" + day + "日";
             document.getElementById("p-xq").innerText = week;
         }
+
+        $(window).resize(function() {
+            location.reload(true)
+        });
     </script>
 
-    <div class="zwz" style="height: 50px;"></div>
+    <div class="zwz" style="height: 83px;"></div>
     <!-- 上面又一个占位盒子 -->
     <div class="div-ssk">
         <input type="search" id="q" autofocus="autofocus">
         <a id="a-ssj" href="javascript:baidu()">搜 索</a>
     </div>
     <!-- 上面是搜索的盒子 -->
+    <div class="zwz" style="height: 130px;"></div>
+    <!-- 上面占位的盒子 -->
 
     <div class="div-dbdh">
         <ul class="breadcrumb">

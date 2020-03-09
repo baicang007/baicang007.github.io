@@ -21,9 +21,15 @@ html {
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
+    display: flex;
+    /* display: flex;实现flex弹性布局 */
+    justify-content: center;
+    /* justify-content: center;让内容水平居中对齐 */
+    align-items: center;
+    /* align-items: center;让内容垂直居中对齐 */
+    flex-direction: column;
+    /* 用弹性布局中的子元素垂直排列 */
     overflow: hidden;
-    /* background-image: url("images/221923120818963975.jpg"); */
 }
 
 .div-sjk {
