@@ -3,7 +3,9 @@ let lcStg, lcStgRy, shwTxt;
 window.onload = function load() {
 	lcStg = localStorage.text;
 	if (lcStg == null) {
-		lcStg = "我的主页 C https://baicang007.github.io";
+		lcStg =
+			"我的主页 C https://baicang007.github.io,百度 A https://www.baidu.com";
+		lcStg += ",百度翻译 F https://fanyi.baidu.com/?aldtype=85#zh/en/";
 	}
 	showTxt();
 	document.addEventListener("keyup", oneGetFocus);
