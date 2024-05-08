@@ -16,8 +16,6 @@ window.onload = function load() {
 	document.addEventListener("keyup", oneGetFocus);
 	document.getElementById("schtx").addEventListener("keyup", schKeyDown);
 	document.getElementById("one").addEventListener("keyup", oneKeyGo);
-	document.getElementById("add").addEventListener("click", addClk);
-	document.getElementById("del").addEventListener("click", delClk);
 	document.getElementById("baidu").addEventListener("click", schClick);
 };
 
@@ -88,25 +86,27 @@ function schClick(x) {
 	} else {
 		switch (x) {
 			case KeyUp: //Search within one month
-				str = "https://www.baidu.com/s?q1=" + str;
-				str = str + "&q2=&q3=&q4=&gpc=stf%3D1633445032.961%2C1636123432.961%7";
-				str = str + "Cstftype%3D1&ft=&q5=&q6=&tn=baiduadv";
+				delClk();
 				break;
 			case KeyEnter: //Search within one year
 				str = "https://www.baidu.com/s?q1=" + str;
 				str = str + "&q2=&q3=&q4=&gpc=stf%3D1604509977.288%2C1636045977.288%7";
 				str = str + "Cstftype%3D1&ft=&q5=&q6=&tn=baiduadv";
+				window.open(str);
+				break;
+			case KeyDown:
+				addClk();
 				break;
 			default:
 				str = "https://www.baidu.com/s?wd=" + str;
+				window.open(str);
 				break;
 		}
-		window.open(str);
 	}
 }
 
 function addClk() {
-	let str = document.getElementById("addtx").value;
+	let str = document.getElementById("schtx").value;
 	if (str) {
 		const space = str.split(" ");
 		if (space.length == 3) {
@@ -114,24 +114,24 @@ function addClk() {
 				str = lcStg + "," + str;
 			}
 			localStorage.text = lcStg = str;
-			document.getElementById("addtx").value = "";
+			document.getElementById("schtx").value = "";
 			showTxt();
-			document.getElementById("addtx").focus();
+			document.getElementById("schtx").focus();
 		}
 	}
 }
 
 function delClk() {
-	const str = document.getElementById("deltx").value;
+	const str = document.getElementById("schtx").value;
 	if (str) {
 		if (lcStg) {
 			for (let i in lcStgRy) {
 				if (lcStgRy[i].search(str) != -1) {
 					lcStgRy.splice(i, 1);
 					localStorage.text = lcStg = lcStgRy.join(",");
-					document.getElementById("deltx").value = "";
+					document.getElementById("schtx").value = "";
 					showTxt();
-					document.getElementById("deltx").focus();
+					document.getElementById("schtx").focus();
 					break;
 				}
 			}
@@ -140,6 +140,7 @@ function delClk() {
 }
 
 function oneGetFocus(event) {
+	//keycode 27=Esc
 	if (event.keyCode == 27) {
 		document.getElementById("one").focus();
 	}
