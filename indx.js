@@ -1,4 +1,7 @@
 let lcStg, lcStgRy, shwTxt;
+const KeyUp = 38;
+const KeyDown = 40;
+const KeyEnter = 13;
 
 window.onload = function load() {
 	lcStg = localStorage.text;
@@ -64,15 +67,17 @@ function oneKeyGo(event) {
 }
 
 function schKeyDown(event) {
-	const keynum = window.event ? event.keyCode : event.which;
-	if (keynum == 13) {
-		schClick(12);
+	let keynum = window.event ? event.keyCode : event.which;
+	if (keynum == KeyEnter) {
+		schClick(KeyEnter);
 	}
-	if (keynum == 40) {
-		schClick(1);
+	//40=key down
+	if (keynum == KeyDown) {
+		schClick(KeyDown);
 	}
-	if (keynum == 38) {
-		schClick();
+	//38=key up
+	if (keynum == KeyUp) {
+		schClick(KeyUp);
 	}
 }
 
@@ -82,12 +87,12 @@ function schClick(x) {
 		alert("你不能搜索空气---啊!");
 	} else {
 		switch (x) {
-			case 1: //Search within one month
+			case KeyUp: //Search within one month
 				str = "https://www.baidu.com/s?q1=" + str;
 				str = str + "&q2=&q3=&q4=&gpc=stf%3D1633445032.961%2C1636123432.961%7";
 				str = str + "Cstftype%3D1&ft=&q5=&q6=&tn=baiduadv";
 				break;
-			case 12: //Search within one year
+			case KeyEnter: //Search within one year
 				str = "https://www.baidu.com/s?q1=" + str;
 				str = str + "&q2=&q3=&q4=&gpc=stf%3D1604509977.288%2C1636045977.288%7";
 				str = str + "Cstftype%3D1&ft=&q5=&q6=&tn=baiduadv";
