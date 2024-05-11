@@ -28,6 +28,7 @@ textarea {
 	width: 97%;
 	height: auto;
 	resize: none;
+	text-align: center;
 	margin-top: 11px;
 	border: none;
 	outline: none;

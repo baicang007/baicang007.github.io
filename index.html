@@ -14,7 +14,20 @@
 	<input class="inputx" id="schtx" type="text" title="我的主页 C https://baicang007.github.io" required />
 	<input type="button" id="baidu" value="百 度" />
 	<div id="container"></div>
-	<textarea id="showTxt" cols="17" rows="3"></textarea>
+	<textarea id="showTxt"></textarea>
+	<script>
+		let timetxt = document.getElementById("showTxt");
+		function showTime() {
+			let time = new Date;
+			let hour = time.getHours();
+			let minutes = time.getMinutes();
+			let seconds = time.getSeconds();
+			let time2 = hour.toString(2) + ":" + minutes.toString(2) + ":" + seconds.toString(2);
+			// console.log(time2)
+			timetxt.value = time2;
+		}
+		setInterval(showTime, 1000);
+	</script>
 </body>
 
 </html>

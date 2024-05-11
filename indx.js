@@ -26,12 +26,13 @@ function showTxt() {
 	}
 	if (lcStg) {
 		lcStgRy = lcStg.split(",");
+		let k, box, boxImg, Img, p;
 		for (let i in lcStgRy) {
-			const k = lcStgRy[i].split(" ");
-			const box = document.createElement("div");
-			const boxImg = document.createElement("div");
-			const Img = document.createElement("img");
-			const p = document.createElement("p");
+			k = lcStgRy[i].split(" ");
+			box = document.createElement("div");
+			boxImg = document.createElement("div");
+			Img = document.createElement("img");
+			p = document.createElement("p");
 			box.className = "box";
 			boxImg.className = "img";
 			boxImg.title = k[2];
