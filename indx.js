@@ -1,4 +1,4 @@
-let lcStg, lcStgRy, shwTxt;
+let lcStg, lcStgRy, shwTxt, dragX, dragY, dragContent;
 const KeyUp = 38;
 const KeyDown = 40;
 const KeyEnter = 13;
@@ -22,12 +22,12 @@ window.onload = function load() {
 	boxs.addEventListener("dragstart", (event) => {
 		let draging = event.target;
 		draging.style.opacity = "0.1";
-		// draging.console.log(draging);
+		dragX = Number(draging.title);
+		// console.log(typeof dragX);
 	});
 	boxs.addEventListener("dragend", (event) => {
 		let draging = event.target;
 		draging.style.opacity = "1";
-		// draging.console.log(draging);
 	});
 };
 
@@ -52,6 +52,8 @@ function showTxt() {
 			Img.src = "images/" + k[1] + ".png";
 			Img.title = i.toString();
 			Img.draggable = "true";
+			Img.addEventListener("dragover", drover);
+			Img.addEventListener("drop", droped);
 			p.innerText = k[0];
 			container.appendChild(box);
 			box.appendChild(boxImg);
@@ -159,4 +161,19 @@ function oneGetFocus(event) {
 	if (event.keyCode == 27) {
 		document.getElementById("one").focus();
 	}
+}
+
+function droped(event) {
+	if (dragX != dragY) {
+		dragY = Number(this.title);
+		dragContent = lcStgRy[dragX];
+		lcStgRy[dragX] = lcStgRy[dragY];
+		lcStgRy[dragY] = dragContent;
+		localStorage.text = lcStg = lcStgRy.join(",");
+		showTxt();
+	}
+}
+
+function drover(event) {
+	event.preventDefault();
 }
