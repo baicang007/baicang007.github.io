@@ -2,6 +2,7 @@
 <html lang="zh">
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8" />
 	<title>One Key Go--!</title>
 	<script src="indx.js"></script>
@@ -14,9 +15,9 @@
 	<input class="inputx" id="schtx" type="text" title="我的主页 C https://baicang007.github.io" required />
 	<input type="button" id="baidu" value="百 度" />
 	<div id="container"></div>
-	<textarea id="showTxt"></textarea>
+	<textarea id="showTimes" title="time"></textarea>
 	<script>
-		let timetxt = document.getElementById("showTxt");
+		let timetxt = document.getElementById("showTimes");
 		function showTime() {
 			let time = new Date;
 			let hour = time.getHours();

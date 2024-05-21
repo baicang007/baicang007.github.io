@@ -17,6 +17,18 @@ window.onload = function load() {
 	document.getElementById("schtx").addEventListener("keyup", schKeyDown);
 	document.getElementById("one").addEventListener("keyup", oneKeyGo);
 	document.getElementById("baidu").addEventListener("click", schClick);
+
+	const boxs = document.getElementById("container");
+	boxs.addEventListener("dragstart", (event) => {
+		let draging = event.target;
+		draging.style.opacity = "0.1";
+		// draging.console.log(draging);
+	});
+	boxs.addEventListener("dragend", (event) => {
+		let draging = event.target;
+		draging.style.opacity = "1";
+		// draging.console.log(draging);
+	});
 };
 
 function showTxt() {
@@ -38,6 +50,8 @@ function showTxt() {
 			boxImg.title = k[2];
 			boxImg.addEventListener("click", boxClk);
 			Img.src = "images/" + k[1] + ".png";
+			Img.title = i.toString();
+			Img.draggable = "true";
 			p.innerText = k[0];
 			container.appendChild(box);
 			box.appendChild(boxImg);

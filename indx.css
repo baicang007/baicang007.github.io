@@ -65,15 +65,12 @@ textarea {
 
 #container .box .img:hover {
 	border-radius: 10px;
-	box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.2),
-		-9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.2), -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
 }
 
 #container .box .img:active {
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
-		inset 9px 9px 15px rgba(0, 0, 0, 0.1),
-		inset -9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.1s ease-out;
 }
 
@@ -109,9 +106,7 @@ textarea {
 .inputx:valid,
 .inputx:focus,
 .inputx:hover {
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
-		inset 9px 9px 15px rgba(0, 0, 0, 0.1),
-		inset -9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
 }
 
@@ -134,15 +129,12 @@ textarea {
 #one:focus,
 #one:hover {
 	color: slategrey;
-	box-shadow: 9px 9px 15px rgba(34, 23, 23, 0.2),
-		-9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 9px 9px 15px rgba(34, 23, 23, 0.2), -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
 }
 
 [type="button"]:active,
 #one:active {
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8),
-		inset 9px 9px 15px rgba(0, 0, 0, 0.1),
-		inset -9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.1s ease-out;
 }
