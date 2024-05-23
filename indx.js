@@ -36,30 +36,28 @@ function showTxt() {
 	while (container.hasChildNodes()) {
 		container.removeChild(container.lastChild);
 	}
-	if (lcStg) {
-		lcStgRy = lcStg.split(",");
-		let k, box, boxImg, Img, p;
-		for (let i in lcStgRy) {
-			k = lcStgRy[i].split(" ");
-			box = document.createElement("div");
-			boxImg = document.createElement("div");
-			Img = document.createElement("img");
-			p = document.createElement("p");
-			box.className = "box";
-			boxImg.className = "img";
-			boxImg.title = k[2];
-			boxImg.addEventListener("click", boxClk);
-			Img.src = "images/" + k[1] + ".png";
-			Img.title = i.toString();
-			Img.draggable = "true";
-			Img.addEventListener("dragover", drover);
-			Img.addEventListener("drop", droped);
-			p.innerText = k[0];
-			container.appendChild(box);
-			box.appendChild(boxImg);
-			boxImg.appendChild(Img);
-			box.appendChild(p);
-		}
+	lcStgRy = lcStg.split(",");
+	let k, box, boxImg, Img, p;
+	for (let i in lcStgRy) {
+		k = lcStgRy[i].split(" ");
+		box = document.createElement("div");
+		boxImg = document.createElement("div");
+		Img = document.createElement("img");
+		p = document.createElement("p");
+		box.className = "box";
+		boxImg.className = "img";
+		boxImg.title = k[2];
+		boxImg.addEventListener("click", boxClk);
+		Img.src = "images/" + k[1] + ".png";
+		Img.title = i.toString();
+		Img.draggable = "true";
+		Img.addEventListener("dragover", drover);
+		Img.addEventListener("drop", droped);
+		p.innerText = k[0];
+		container.appendChild(box);
+		box.appendChild(boxImg);
+		boxImg.appendChild(Img);
+		box.appendChild(p);
 	}
 }
 
@@ -70,13 +68,11 @@ function boxClk() {
 function oneKeyGo(event) {
 	const keynum = window.event ? event.keyCode : event.which;
 	const keychar = String.fromCharCode(keynum);
-	if (lcStg) {
-		for (let i in lcStgRy) {
-			const k = lcStgRy[i].split(" ");
-			if (keychar == k[1]) {
-				window.open(k[2], "_self");
-				break;
-			}
+	for (let i in lcStgRy) {
+		const k = lcStgRy[i].split(" ");
+		if (keychar == k[1]) {
+			window.open(k[2], "_self");
+			break;
 		}
 	}
 }
@@ -125,11 +121,9 @@ function schClick(x) {
 function addClk() {
 	let str = document.getElementById("schtx").value;
 	if (str) {
-		const space = str.split(" ");
+		let space = str.split(" ");
 		if (space.length == 3) {
-			if (lcStg) {
-				str = lcStg + "," + str;
-			}
+			str = lcStg + "," + str;
 			localStorage.text = lcStg = str;
 			document.getElementById("schtx").value = "";
 			showTxt();
@@ -141,16 +135,14 @@ function addClk() {
 function delClk() {
 	const str = document.getElementById("schtx").value;
 	if (str) {
-		if (lcStg) {
-			for (let i in lcStgRy) {
-				if (lcStgRy[i].search(str) != -1) {
-					lcStgRy.splice(i, 1);
-					localStorage.text = lcStg = lcStgRy.join(",");
-					document.getElementById("schtx").value = "";
-					showTxt();
-					document.getElementById("schtx").focus();
-					break;
-				}
+		for (let i in lcStgRy) {
+			if (lcStgRy[i].search(str) != -1) {
+				lcStgRy.splice(i, 1);
+				localStorage.text = lcStg = lcStgRy.join(",");
+				document.getElementById("schtx").value = "";
+				showTxt();
+				document.getElementById("schtx").focus();
+				break;
 			}
 		}
 	}

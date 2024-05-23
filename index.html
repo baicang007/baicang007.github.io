@@ -12,12 +12,13 @@
 
 <body>
 	<div id="one" tabindex="0" autofocus="autofocus">---</div>
-	<input class="inputx" id="schtx" type="text" title="我的主页 C https://baicang007.github.io" required />
-	<input type="button" id="baidu" value="百 度" />
+	<form action="#" id="bai">
+		<input class="inputx" id="schtx" type="text" title="我的主页 C https://baicang007.github.io" required />
+		<input type="button" id="baidu" value="百-度" />
+	</form>
 	<div id="container"></div>
-	<textarea id="showTimes" title="time"></textarea>
 	<script>
-		let timetxt = document.getElementById("showTimes");
+		let timetxt = document.getElementById("one");
 		function showTime() {
 			let time = new Date;
 			let hour = time.getHours();
@@ -25,7 +26,7 @@
 			let seconds = time.getSeconds();
 			let time2 = hour.toString(2) + ":" + minutes.toString(2) + ":" + seconds.toString(2);
 			// console.log(time2)
-			timetxt.value = time2;
+			timetxt.innerText = time2;
 		}
 		setInterval(showTime, 1000);
 	</script>
