@@ -45,6 +45,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
+	width: 83%;
 }
 
 #container .box {
@@ -95,7 +96,7 @@ body {
 }
 
 .inputx {
-	width: 70%;
+	width: 57%;
 	line-height: 17px;
 	height: 17px;
 	font: 16px/9px arial;
