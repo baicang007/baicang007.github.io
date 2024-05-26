@@ -1,4 +1,4 @@
-let lcStg, lcStgRy, shwTxt, dragX, dragY, dragContent;
+let lcStg, lcStgRy, dragX, dragY, dragContent;
 const KeyUp = 38;
 const KeyDown = 40;
 const KeyEnter = 13;
@@ -12,7 +12,7 @@ window.onload = function load() {
 		lcStg += ",哔哩哔哩 B https://www.bilibili.com";
 		lcStg += ",GitHub H https://github.com,Linux L https://www.linux.org";
 	}
-	showTxt();
+	showBox();
 	document.addEventListener("keyup", oneGetFocus);
 	document.getElementById("schtx").addEventListener("keyup", schKeyDown);
 	document.getElementById("one").addEventListener("keyup", oneKeyGo);
@@ -31,7 +31,7 @@ window.onload = function load() {
 	});
 };
 
-function showTxt() {
+function showBox() {
 	const container = document.getElementById("container");
 	while (container.hasChildNodes()) {
 		container.removeChild(container.lastChild);
@@ -126,7 +126,7 @@ function addClk() {
 			str = lcStg + "," + str;
 			localStorage.text = lcStg = str;
 			document.getElementById("schtx").value = "";
-			showTxt();
+			showBox();
 			document.getElementById("schtx").focus();
 		}
 	}
@@ -140,7 +140,7 @@ function delClk() {
 				lcStgRy.splice(i, 1);
 				localStorage.text = lcStg = lcStgRy.join(",");
 				document.getElementById("schtx").value = "";
-				showTxt();
+				showBox();
 				document.getElementById("schtx").focus();
 				break;
 			}
@@ -162,7 +162,7 @@ function droped(event) {
 		lcStgRy[dragX] = lcStgRy[dragY];
 		lcStgRy[dragY] = dragContent;
 		localStorage.text = lcStg = lcStgRy.join(",");
-		showTxt();
+		showBox();
 	}
 }
 
