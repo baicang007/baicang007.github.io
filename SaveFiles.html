@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaveFiles</title>
+</head>
+
+<body>
+
+    <script>
+
+        function waitInSeconds(seconds) {
+            console.log(`Waiting for ${seconds} seconds...`);
+            return new Promise(resolve => {
+                setTimeout(() => {
+                    console.log("Finished waiting!");
+                    resolve();
+                }, seconds * 1000);
+            });
+        }
+
+        // Example usage
+        waitInSeconds(3).then(() => {
+            console.log("Done waiting for 3 seconds!");
+        });
+    </script>
+</body>
+
+</html>

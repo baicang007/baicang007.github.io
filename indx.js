@@ -103,8 +103,6 @@ function schClick(x) {
 				break;
 			case KeyEnter: //Search within one year
 				str = "https://www.baidu.com/s?q1=" + str;
-				str = str + "&q2=&q3=&q4=&gpc=stf%3D1604509977.288%2C1636045977.288%7";
-				str = str + "Cstftype%3D1&ft=&q5=&q6=&tn=baiduadv";
 				window.open(str);
 				break;
 			case KeyDown:
