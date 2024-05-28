@@ -16,20 +16,13 @@ body {
 
 #one {
 	width: auto;
-	height: 20px;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align: center;
+	height: 22px;
+	margin-top: 17px;
 	align-items: center;
+	/* padding-top: 17px; */
 	border: none;
 	outline: none;
 	color: #ccc;
-	border-radius: 5px;
-	transition: all 0.5s ease-out;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
 }
 
 #bai {
@@ -67,32 +60,64 @@ body {
 	height: 100px;
 	border-radius: 10px;
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 #container .box .img:hover {
 	border-radius: 10px;
 	box-shadow: 9px 9px 15px rgba(0, 0, 0, 0.2), -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-o-border-radius: 10px;
 }
 
 #container .box .img:active {
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
 }
 
 #container .box .img img {
 	width: 60px;
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
 }
 
 #container .box .img:hover img {
 	width: 63px;
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
 }
 
 #container .box .img:active img {
 	width: 58px;
 	transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
 }
 
 .inputx {
@@ -107,6 +132,14 @@ body {
 	border: none;
 	outline: none;
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	-ms-border-radius: 10px 0 0 10px;
+	-o-border-radius: 10px 0 0 10px;
 }
 
 .inputx:valid,
@@ -114,6 +147,10 @@ body {
 .inputx:hover {
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
 }
 
 [type="button"] {
@@ -128,19 +165,32 @@ body {
 	border: none;
 	outline: none;
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	-ms-border-radius: 0 10px 10px 0;
+	-o-border-radius: 0 10px 10px 0;
 }
 
 [type="button"]:hover,
-[type="button"]:focus,
-#one:focus,
-#one:hover {
+[type="button"]:focus {
 	color: slategrey;
 	box-shadow: 9px 9px 15px rgba(34, 23, 23, 0.2), -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
 }
 
-[type="button"]:active,
-#one:active {
+[type="button"]:active {
 	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
 	transition: all 0.1s ease-out;
+	-webkit-transition: all 0.1s ease-out;
+	-moz-transition: all 0.1s ease-out;
+	-ms-transition: all 0.1s ease-out;
+	-o-transition: all 0.1s ease-out;
 }
