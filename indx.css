@@ -9,9 +9,15 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 66%;
+	width: 77%;
 	margin: 10px auto;
 	background-color: #efeeee;
+}
+
+@media screen and (max-width: 580px) {
+	body {
+		width: 88%;
+	}
 }
 
 #one {
@@ -122,11 +128,11 @@ body {
 
 .inputx {
 	width: 57%;
-	line-height: 17px;
-	height: 17px;
+	line-height: 18px;
+	height: 18px;
 	font: 16px/9px arial;
 	margin: 10px 0;
-	padding: 10px 33px 10px 13px;
+	padding: 10px 15px 5px 9px;
 	border-radius: 10px 0 0 10px;
 	background: transparent;
 	border: none;
@@ -145,7 +151,7 @@ body {
 .inputx:valid,
 .inputx:focus,
 .inputx:hover {
-	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 9px 9px 15px rgba(0, 0, 0, 0.1), inset -9px -9px 15px rgba(255, 255, 255, 1);
+	box-shadow: 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 rgba(255, 255, 255, 0.8), inset 5px 5px 8px rgba(0, 0, 0, 0.1), inset -5px -5px 8px rgba(255, 255, 255, 1);
 	transition: all 0.5s ease-out;
 	-webkit-transition: all 0.5s ease-out;
 	-moz-transition: all 0.5s ease-out;
@@ -157,7 +163,7 @@ body {
 	cursor: pointer;
 	margin: 10px 0;
 	width: 18%;
-	height: 39px;
+	height: 33px;
 	border-radius: 0 10px 10px 0;
 	font: 16px/9px arial;
 	font-size: 17px;
