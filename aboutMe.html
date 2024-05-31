@@ -8,32 +8,49 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            /* 淡蓝色背景 */
-            color: #333;
+            background-image: linear-gradient(to right, #17518e, #832c73);
             margin: 0;
             padding: 0;
         }
 
         .container {
-            max-width: 800px;
+            /* display: flex; */
+            width: 83%;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        @media screen and (min-width: 999px) {
+            .container {
+                width: 830px;
+            }
         }
 
         h1 {
-            text-align: center;
-            color: #4169e1;
+            display: table;
+            margin: 25px auto;
             /* 深蓝色标题 */
+            color: #3060ef;
+            /* 设置文字发光效果 */
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+
+        h1:hover {
+            color: #397eed;
         }
 
         .profile-img {
             display: block;
-            margin: 0 auto;
-            border-radius: 50%;
+            margin: 15px auto;
+            width: 30%;
+            height: 30%;
         }
 
         .contact-info,
@@ -47,26 +64,42 @@
 <body>
     <div class="container">
         <h1>Personal Profile</h1>
-        <img src="./images/14.png" alt="Profile Picture" class="profile-img">
+        <img id="myPhoto" src="./images/me2.png" alt="Profile Picture" class="profile-img">
 
         <div class="contact-info">
             <h2>Contact Information</h2>
-            <p>Email: your-email@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <p>Phone: 135-9278-8183</p>
+            <p>Email: baihkapl@163.com</p>
         </div>
 
         <div class="interests">
             <h2>Interests and Hobbies</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <p>一个沉迷于文字的笔耕者，一个陶醉于旋律的音乐迷，一个醉心于戏剧的戏迷，一个孜孜不倦的学习者，一个纯粹的人，一个超脱了低级趣味的人！</p>
         </div>
 
         <div class="experience">
             <h2>Personal Experience</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                etdolore magna aliqua.</p>
         </div>
     </div>
+
+    <script>
+        let myPhoto = document.getElementById("myPhoto");
+        myPhoto.addEventListener("mouseup", function () {
+            window.open('./index.html', '_self');
+        });
+    </script>
 </body>
 
 </html>

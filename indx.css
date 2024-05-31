@@ -28,7 +28,8 @@ body {
 	/* padding-top: 17px; */
 	border: none;
 	outline: none;
-	color: #ccc;
+	color: #aaa;
+	/* text-shadow: 0 0 10px #999, 0 0 20px #666; */
 }
 
 #bai {
