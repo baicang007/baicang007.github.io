@@ -98,12 +98,12 @@ function schClick(x) {
 		alert("你不能搜索空气---啊!");
 	} else {
 		switch (x) {
-			case KeyUp: //Search within one month
-				delClk();
-				break;
-			case KeyEnter: //Search within one year
+			case KeyEnter: //Search within bidu
 				str = "https://www.baidu.com/s?q1=" + str;
 				window.open(str);
+				break;
+			case KeyUp:
+				delClk();
 				break;
 			case KeyDown:
 				addClk();
