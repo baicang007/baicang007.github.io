@@ -1,0 +1,147 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* 调整header内边距 */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem; /* 增加水平内边距，使内容向中间集中 */
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 为移动端添加额外样式 */
+@media (max-width: 600px) {
+    .header-content {
+        padding: 1.5rem 2rem; /* 移动端适当减少内边距 */
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-top: 1rem;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    margin: 0.3rem 0;
+}
+
+/* 修改移动端样式 */
+@media (max-width: 600px) {
+    .header-content {
+        padding: 1.5rem 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-top: 1rem;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* 卡片通用样式 */
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 1rem 0;
+    position: relative;
+}
+
+/* 时间线样式 */
+time {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #2a5298;
+    font-weight: bold;
+}
+
+/* 技能卡片 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    background: #e8ecf4;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: #d4e0f7;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .contact {
+        font-size: 0.9rem;
+    }
+    
+    time {
+        position: static;
+        display: block;
+        margin: 0.5rem 0 1rem;
+    }
+}
+
+/* 段落标题 */
+h2 {
+    color: #2a5298;
+    border-left: 5px solid #2a5298;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}

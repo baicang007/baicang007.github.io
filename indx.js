@@ -95,7 +95,9 @@ function schKeyDown(event) {
 function schClick(x) {
 	let str = document.getElementById("schtx").value.trim();
 	if (str == "") {
-		alert("你不能搜索空气---啊!");
+		str = "./resume.html";
+		window.open(str);
+		//alert("你不能搜索空气---啊!");
 	} else {
 		switch (x) {
 			case KeyEnter: //Search within bidu
