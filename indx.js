@@ -6,7 +6,7 @@ const KeyEnter = 13;
 window.onload = function load() {
 	lcStg = localStorage.text;
 	if (lcStg == null || lcStg == "") {
-		lcStg = "我的主页 C ./aboutMe.html";
+		lcStg = "我的主页 C ./resume.html";
 		lcStg += ",百度 A https://www.baidu.com";
 		lcStg += ",百度翻译 F https://fanyi.baidu.com/?aldtype=85#zh/en/";
 		lcStg += ",哔哩哔哩 B https://www.bilibili.com";
