@@ -9,7 +9,9 @@ window.onload = function load() {
 		lcStg = "我的主页 C ./resume.html";
 		lcStg += ",百度 A https://www.baidu.com";
 		lcStg += ",百度翻译 F https://fanyi.baidu.com/?aldtype=85#zh/en/";
-		lcStg += ",哔哩哔哩 B https://www.bilibili.com";
+		lcStg +=
+			",哔哩哔哩 B https://www.bilibili.com,影视 Y https://www.gying.net/";
+		lcStg += ",哔哩哔哩 G https://gitee.com,myAI D https://chat.deepseek.com";
 		lcStg += ",GitHub H https://github.com,Linux L https://www.linux.org";
 	}
 	showBox();
@@ -95,7 +97,7 @@ function schKeyDown(event) {
 function schClick(x) {
 	let str = document.getElementById("schtx").value.trim();
 	if (str == "") {
-		str = "./resume.html";
+		str = "./aboutMe.html";
 		window.open(str);
 		//alert("你不能搜索空气---啊!");
 	} else {
