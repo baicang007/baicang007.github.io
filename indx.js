@@ -13,6 +13,8 @@ window.onload = function load() {
 		lcStg += ",哔哩 B https://www.bilibili.com,影视 Y https://www.gying.net";
 		lcStg += ",Gitee G https://gitee.com,myAI D https://chat.deepseek.com";
 		lcStg += ",GitHub H https://github.com,Linux L https://www.linux.org";
+		lcStg +=
+			",移动邮箱 X https://mail.10086.cn,天翼网盘 T https://cloud.189.cn";
 	}
 	showBox();
 	document.addEventListener("keyup", oneGetFocus);
@@ -51,7 +53,6 @@ function showBox() {
 		boxImg.title = k[2];
 		boxImg.addEventListener("click", boxClk);
 		Img.src = "images/" + k[1] + ".png";
-		Img.title = i.toString();
 		Img.draggable = "true";
 		Img.addEventListener("dragover", drover);
 		Img.addEventListener("drop", droped);
